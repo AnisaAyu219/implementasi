@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #29B4E0, #D0E6ED);
+}
+
+.container_form {
+    margin-top: 20px;
+    max-width: 800px;
+    max-height: 800px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container_form .title {
+    font-size: 24px;
+    font-weight: 500;
+   display: flex;
+}
+
+.container_form .title::before {
+    content: " ";
+    left: 0;
+    bottom: -5px;
+    height: 5px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #29B4E0, #D0E6ED);
+    position: absolute;
+}
+
+.content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+
+form .user-details .input-inbox {
+    margin-bottom: 20px;
+    width: 48%; /* Ubah lebar elemen input-inbox */
+}
+form .user-details .input-doc {
+
+    width: 48%; /* Ubah lebar elemen input-inbox */
+}
+
+
+form .input-inbox span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 10px;
+
+}
+.row {
+    font-size: 14px;
+            display: flex; /* Menggunakan flexbox untuk mengatur baris */
+            justify-content: space-between; /* Membuat elemen-elemen berada di sisi kanan dan kiri */
+            align-items: center; /* Menengahkan elemen-elemen secara vertikal */
+            padding: 10px; /* Menambahkan padding agar kontennya tidak terlalu dekat dengan tepi baris */
+        }
+
+        /* CSS untuk mengatur konten kiri */
+        .left-content {
+            align: center;
+            flex: 1; /* Memberikan rasio fleksibilitas yang sama pada kolom kiri */
+            text-align: left;
+        }
+
+        /* CSS untuk mengatur konten kanan */
+        .right-content {
+            align: center;
+            flex: 1; /* Memberikan rasio fleksibilitas yang sama pada kolom kanan */
+        }
+
+
+
+.user-details .input-inbox input,
+.user-details .input-inbox textarea,
+.user-details .input-inbox select {
+    height: 30px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-inbox textarea {
+    height: 100px;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid,
+.user-details .input-inbox textarea:focus,
+.user-details .input-inbox textarea:valid,
+.user-details .input-inbox select:focus,
+.user-details .input-inbox select:valid {
+    border-color: #29B4E0;
+}
+
+.content form .category {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+form .category input[type="radio"] {
+    display: none;
+}
+
+form .category label {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Jarak antara elemen label */
+    cursor: pointer;
+}
+
+form .category label .dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px; /* Jarak antara lingkaran dan teks */
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Ganti warna latar belakang lingkaran saat dipilih */
+#dot-1:checked ~ .category label.one .dot {
+    background: black;
+}
+
+#dot-2:checked ~ .category label.two .dot {
+    background: #29B4E0;
+}
+
+form input[type="radio"] {
+    display: none;
+}
+
+/* CSS untuk mengatur lebar dan tinggi tombol */
+form .button input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(135deg, #29B4E0, #D0E6ED);
+    margin-top: 10px;
+}
+
+form .button input:hover {
+    background: linear-gradient(-135deg, #29B4E0, #D0E6ED);
+}
+
+@media (max-width: 584px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+form .category {
+    width: 100%;
+}
+
+.header {
+    background-color: #D9D9D9;
+    padding: 15px 0;
+    color: #254877;
+    position: fixed; /* Tambahkan properti position */
+    top: 0; /* Tambahkan properti top */
+    width: 100%; /* Agar header mengisi seluruh lebar */
+}
+
+
+.header .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header .search-box {
+    text-align: center;
+}
+
+/* CSS untuk tombol pencarian */
+.btn-success {
+    background-color: #28a745; /* Warna hijau */
+    color: #fff;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Warna hijau saat dihover */
+}
+
+
+.header .profile-logo {
+    text-align: right;
+}
+
+.profile-logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* CSS untuk sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -260px; /* Sembunyikan sidebar saat pertama kali */
+    width: 260px;
+    height: 100%;
+    background-color: #fff;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar-header {
+    background-color: #007BFF;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #007BFF;
+    cursor: pointer;
+}
+
+/* Tombol untuk menutup sidebar */
+.close-sidebar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    background-color: transparent;
+    color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+.close-sidebar:hover {
+    color: #ff0000;
+}
+

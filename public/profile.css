@@ -1,0 +1,299 @@
+.header {
+    background-color: #D9D9D9;
+    padding: 15px 0;
+    color: #254877;
+}
+
+
+.header .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.header .search-box {
+    text-align: center;
+}
+
+
+/* CSS untuk tombol pencarian */
+.btn-success {
+    background-color: #28a745; /* Warna hijau */
+    color: #fff;
+    border: none;
+}
+
+
+.btn-success:hover {
+    background-color: #218838; /* Warna hijau saat dihover */
+}
+
+
+
+
+.header .profile-logo {
+    text-align: right;
+}
+
+
+.profile-logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* CSS untuk sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -260px; /* Sembunyikan sidebar saat pertama kali */
+    width: 260px;
+    height: 100%;
+    background-color: #fff;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar.active {
+    right: 0;
+}
+
+
+.sidebar-header {
+    background-color: #007BFF;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.sidebar-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+
+.menu a:hover {
+    color: #007BFF;
+    cursor: pointer;
+}
+
+
+/* Tombol untuk menutup sidebar */
+.close-sidebar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    background-color: transparent;
+    color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+
+.close-sidebar:hover {
+    color: #ff0000;
+}
+.circle-small {
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    border-radius: 50%; /* Mengubah elemen menjadi lingkaran */
+    margin: 0 auto; /* Untuk mengatur tengah horisontal */
+}
+
+
+
+
+
+
+
+
+/* Reset style default browser untuk menghindari masalah kompatibilitas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Styling header */
+  headerr {
+    background-color: #D9D9D9; /* Warna latar belakang header */
+    padding: 10px; /* Ruang dalam header */
+  }
+
+  .containerr {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .judul-situs {
+    font-family: sans-serif; /* Menggunakan font sans-serif */
+    font-size: 19px; /* Ukuran font judul */
+    font-weight: bold; /* Ketebalan font judul */
+    color: #254877; /* Warna teks judul */
+  }
+  .search-box {
+    display: flex;
+    flex-grow: 1; /* Mengisi ruang yang tersedia */
+      max-width: 400px; /* Atur lebar maksimal */
+      margin: 0 20px; /* Beri jarak antara kotak pencarian dan judul */
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 200px;
+  }
+
+  button[type="submit"] {
+    background-color: #5EA467;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+/* Reset beberapa gaya bawaan browser */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Container untuk card */
+.card-container {
+  display: flex;
+  justify-content: space-between; /* Menyebarkan card di sebelah kiri dan kanan */
+  flex-wrap: wrap; /* Membungkus card ke baris baru jika tidak cukup lebar */
+  padding: 40px; /* Padding untuk container */
+}
+
+
+/* Gaya untuk card */
+.card {
+  flex: 0 0 calc(33.333% - 20px); /* Lebar card, dengan jarak antara card */
+  margin: 40px; /* Jarak antara card */
+  border: 2px solid #636363;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-family: sans-serif; /* Menggunakan font sans-serif */
+  font-size: 14px; /* Ukuran font judul */
+  font-weight: bold; /* Ketebalan font judul */
+  color: #254877; /* Warna teks judul */
+
+}
+
+
+/* Gaya untuk card di sebelah kiri */
+.left-cards {
+  flex: 1; /* Memberikan fleksibilitas dalam lebar */
+}
+
+
+/* Gaya untuk card di sebelah kanan */
+.right-cards {
+  flex: 2; /* Memberikan fleksibilitas dalam lebar */
+}
+
+
+/* Media query untuk tampilan responsif */
+@media (max-width: 768px) {
+  .card {
+      flex: 0 0 100%; /* Gunakan lebar penuh pada layar kecil */
+  }
+}
+.circle {
+  width: 180px;
+  height: 180px;
+  background-color: #3498db;
+  border-radius: 50%; /* Mengubah elemen menjadi lingkaran */
+  margin: 0 auto; /* Untuk mengatur tengah horisontal */
+}
+.circle-small {
+  width: 40px;
+  height: 40px;
+  background-color: #3498db;
+  border-radius: 50%; /* Mengubah elemen menjadi lingkaran */
+  margin: 0 auto; /* Untuk mengatur tengah horisontal */
+}
+.rounded-border-text {
+  display: inline-block;
+  padding: 4px;
+  border: 3px solid #254877; /* Warna border harus sama dengan latar belakang */
+  border-radius: 50px; /* Radius border setengah dari tinggi konten */
+  color: #254877;
+}
+
+
+
+
+.kotak {
+  width: 160px; /* Lebar kotak */
+  height: 110px; /* Tinggi kotak */
+  background-color: #5b5b5b; /* Warna latar belakang kotak */
+  border: 1px solid #ddd; /* Border kotak */
+  border-radius: 10px; /* Radius border setengah dari tinggi konten */
+  margin-top: 5px; /* Jarak antara kotak-kotak (opsional) */
+  text-align: center; /* Mengatur teks ke tengah */
+  line-height: 100px; /* Mengatur teks ke tengah vertikal */
+  color: #fff; /* Warna teks */
+}
+
+
+.kelola {
+  background-color: #3498db; /* Warna latar belakang biru */
+  color: #fff; /* Warna teks putih */
+  padding: 10px 20px; /* Padding tombol */
+  border: none; /* Menghapus border */
+  border-radius: 5px; /* Membuat sudut tombol sedikit melengkung */
+  cursor: pointer; /* Mengubah kursor saat diarahkan ke tombol */
+  float: right;
+}
+
+
+.kelola:hover {
+  background-color: #2980b9; /* Warna latar belakang biru saat tombol dihover */
+}
