@@ -70,3 +70,4 @@ Route::get('/get_profile_admin/{id_admin}', [ProfileController::class, 'get_prof
 Route::get('/get_edit_karya/{id_karya}', [KaryaController::class, 'get_edit']);
 Route::post('/update_karya/{id_karya}', [KaryaController::class, 'update_karya']);
 Route::get('/komentar_karya/{id_karya}', [KomentarController::class, 'komentar_karya']);
+Route::get('/get_search/{nama}', [KaryaController::class, 'get_search']);
