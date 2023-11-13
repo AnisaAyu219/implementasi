@@ -10,6 +10,7 @@ class KomentarController extends Controller
 
         $id_karya = $request->input('id_karya');
         $isi = $request->input('isi');
+        $nim = $request->input('nim');
 
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -21,7 +22,7 @@ class KomentarController extends Controller
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => array('id_karya'=>$id_karya,'isi'=>$isi),
+            CURLOPT_POSTFIELDS => array('id_karya'=>$id_karya, 'isi'=>$isi, 'nim'=>$nim),
             CURLOPT_HTTPHEADER => array(
               'Accept: application/json'
             ),
@@ -62,7 +63,7 @@ class KomentarController extends Controller
 
         if($response_code == 200){
             //Lalu di kirim ke view jurnal
-            return view('tablekomentar', compact('result'));
+            return view('p_tabelkomentar', compact('result'));
           }else{
             //Jika gagal di arahkan ke logout
             echo "<pre>";

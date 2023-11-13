@@ -6,7 +6,7 @@
 	<title></title>
 </head>
 <body>
-	<h1>Table Komentar</h1>
+	<h1>Percobaan Table Komentar</h1>
 <table>
 <tr>
 	<th>Id_Komentar</th>
@@ -20,7 +20,7 @@
     <td>{{ $p->id_karya }}</td>
     <td>{{ $p->isi }}</td>
     <td>
-        <form action="{{ url('/delete_komentar/'.$p->id_komentar) }}" method="POST">
+        <form method="POST" action="{{ url('/delete_komentar/'.$p->id_komentar) }}">
             @csrf
             @method('DELETE')
             <button type="submit">Delete</button>

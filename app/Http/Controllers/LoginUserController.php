@@ -31,16 +31,14 @@ class LoginUserController extends Controller
         ));
 
         $response = curl_exec($curl);
-        $response_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+          $result = json_decode($response);
 
-        curl_close($curl);
-        $result = json_decode($response);
+          echo "<pre>";
+            print_r($result);
+            echo "</pre>";
 
-        // if ($response_code == 200) {
-            return redirect()->to('http://localhost:8010/api/getall_komentar');
-        // } else {
-        //     return view('login');
-        // }
+          curl_close($curl);
+          echo $response;
 
     }
 }

@@ -7,14 +7,17 @@
 </head>
 <body>
 <h1>Form Input Komentar</h1>
-
-<form action="/api/input_komentar" method="POST">
+<form action="/input_komentar" method="POST">
+    @csrf
 	<label>Id Karya</label>
 	<input type="text" name="id_karya">
 	<br>
 	<label>Isi</label>
 	<input type="text" name="isi">
-<br>
+    <br>
+    <label>Nim</label>
+	<input type="text" name="nim">
+    <br>
 	<button value="Submit" type="submit">Submit</button>
 
 </form>
